@@ -10,6 +10,7 @@ import {
 import { Helmet } from 'react-helmet';
 
 import { StyledComponentsDemo } from './styled-components.jsx';
+import { Inventory } from './inventory.jsx';
 import { EmotionDemo } from './emotion.jsx';
 import { ReactJssDemo } from './react-jss.jsx';
 
@@ -28,7 +29,10 @@ class Navbar extends Component {
 				</li>
 				<li>
 					<Link to="/emotion">Emotion Demo</Link>
-				</li>
+                </li>
+                <li>
+                    <Link to="/inventory">Inventory</Link>
+                </li>
 			</ul>
 		);
 	}
@@ -73,7 +77,8 @@ export default class HomeComponent extends Component {
 						component={StyledComponentsDemo}
 					/>
 					<Route path="/react-jss" component={ReactJssDemo} />
-					<Route path="/emotion" component={EmotionDemo} />
+                    <Route path="/emotion" component={EmotionDemo} />
+                    <Route path="/inventory" component={Inventory} />
 					<Route
 						path="*"
 						component={({ staticContext }) => {
