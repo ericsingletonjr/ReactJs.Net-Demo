@@ -11,6 +11,7 @@ import { Helmet } from 'react-helmet';
 
 import { StyledComponentsDemo } from './styled-components.jsx';
 import { Inventory } from './inventory.jsx';
+// import { DetailView } from './detail-view.jsx';
 import { EmotionDemo } from './emotion.jsx';
 import { ReactJssDemo } from './react-jss.jsx';
 

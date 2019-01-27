@@ -8,7 +8,10 @@ module.exports = {
 			{
 				test: /\.jsx?$/,
                 exclude: /(node_modules|prism\.js)/,
-				loader: 'babel-loader'
+				loader: 'babel-loader',
+				query: {
+					plugins: ['transform-class-properties']
+				}
 			}
 		]
 	}
