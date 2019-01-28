@@ -9,11 +9,7 @@ import {
 } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
-import { StyledComponentsDemo } from './styled-components.jsx';
 import { Inventory } from './inventory.jsx';
-// import { DetailView } from './detail-view.jsx';
-import { EmotionDemo } from './emotion.jsx';
-import { ReactJssDemo } from './react-jss.jsx';
 
 class Navbar extends Component {
 	render() {
@@ -22,15 +18,6 @@ class Navbar extends Component {
 				<li>
 					<Link to="/">Home</Link>
 				</li>
-				<li>
-					<Link to="/styled-components">Styled Components Demo</Link>
-				</li>
-				<li>
-					<Link to="/react-jss">React-JSS Demo</Link>
-				</li>
-				<li>
-					<Link to="/emotion">Emotion Demo</Link>
-                </li>
                 <li>
                     <Link to="/inventory">Inventory</Link>
                 </li>
@@ -72,13 +59,7 @@ export default class HomeComponent extends Component {
 						path="/"
 						render={() => <Redirect to="/home" />}
 					/>
-					<Route path="/home" component={HomePage} />
-					<Route
-						path="/styled-components"
-						component={StyledComponentsDemo}
-					/>
-					<Route path="/react-jss" component={ReactJssDemo} />
-                    <Route path="/emotion" component={EmotionDemo} />
+					<Route path="/home" component={HomePage} />					
                     <Route path="/inventory" component={Inventory} />
 					<Route
 						path="*"

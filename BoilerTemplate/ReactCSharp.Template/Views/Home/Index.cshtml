@@ -1,0 +1,17 @@
+@using React.AspNet
+@using React.RenderFunctions
+@using React.Router
+
+@{
+    Layout = "_Layout";
+    var helmetFunctions = new ReactHelmetFunctions();
+
+    var chainedFunctions = new ChainedRenderFunctions(helmetFunctions);
+}
+@Html.ReactRouter("RootComponent", new { }, renderFunctions: chainedFunctions)
+@{
+	ViewBag.HelmetTitle = helmetFunctions.RenderedHelmet.GetValueOrDefault("title");
+}
+<script src="/components-bundle.generated.js"></script>
+<link rel="stylesheet" href="~/style.css">
+@Html.ReactInitJavaScript()
