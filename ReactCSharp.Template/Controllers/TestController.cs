@@ -8,7 +8,7 @@ using Newtonsoft.Json;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace React.Sample.Webpack.CoreMvc.Controllers
+namespace ReactCSharp.Template
 {
     [Route("api/[controller]")]
     public class TestController : Controller
